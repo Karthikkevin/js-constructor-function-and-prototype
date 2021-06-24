@@ -23,7 +23,7 @@ function ConstructorFunction_A(age) {
   this.age = age;
   this.greet = function() {
     console.log(
-      `Constructor Function, Your name is ${this.name} and age is ${this.age}`
+      `Constructor Function: Your name is ${this.name} and age is ${this.age}`
     );
 
     console.log(this);
