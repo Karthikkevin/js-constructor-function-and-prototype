@@ -55,6 +55,7 @@ console.log(fun.__proto__ === funConstructor.prototype);
 fun.printAge();
 console.log(fun.__proto__);
 
+//Multilevel inheritance
 class AgePerson {
   constructor(age) {
     this.page = age;
