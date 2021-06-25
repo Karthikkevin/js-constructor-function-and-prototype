@@ -54,3 +54,38 @@ fun.fun();
 console.log(fun.__proto__ === funConstructor.prototype);
 fun.printAge();
 console.log(fun.__proto__);
+
+class AgePerson {
+  constructor(age) {
+    this.page = age;
+  }
+  printAge = () => console.log(this.page);
+}
+
+class Person extends AgePerson {
+  constructor(name, age, gender) {
+    super(age);
+    this.fname = name;
+    this.pgender = gender;
+  }
+  greet = function() {
+    console.log(`${this.fname} ${this.page} ${this.pgender}`);
+  };
+}
+
+class family extends Person {
+  constructor() {
+    super('123', 45, 'f');
+  }
+  familyId = this.fname + '-' + this.page + '-' + this.pgender;
+  printid() {
+    console.log(this.familyId);
+  }
+}
+
+const pt = new Person('max', '20', 'M');
+console.log(pt);
+pt.greet();
+pt.printAge();
+const fam = new family();
+fam.printid();
