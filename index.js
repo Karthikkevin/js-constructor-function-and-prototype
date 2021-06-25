@@ -51,6 +51,6 @@ funConstructor.prototype = {
 const fun = new funConstructor();
 fun.fun();
 
-console.log(fun.__proto__ === funConstructor.__proto__);
+console.log(fun.__proto__ === funConstructor.prototype);
 fun.printAge();
 console.log(fun.__proto__);
