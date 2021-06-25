@@ -42,7 +42,15 @@ function funConstructor() {
   };
   //return this; -> After Executing all the codes it will returns this
 }
-
+//Prototype
+funConstructor.prototype = {
+  printAge() {
+    console.log(this.age);
+  }
+};
 const fun = new funConstructor();
 fun.fun();
-console.log(fun.age);
+
+console.log(fun.__proto__ === funConstructor.__proto__);
+fun.printAge();
+console.log(fun.__proto__);
